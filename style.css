@@ -1,0 +1,162 @@
+@media only screen and (max-width: 500px) {
+   
+    body{
+     background-size: cover;
+     background-position: center;
+ } 
+
+     
+ 
+ }
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    box-sizing: border-box;
+
+
+}
+
+body {
+    background-image: url(Images/back.png);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* For navbar,logo and login button*/
+header {
+
+    width: 100%;
+    height: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    background: rgba (100000, 0, 0, 0.5);
+}
+
+.logo {
+
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+}
+
+nav li {
+    display: inline-block;
+    list-style: none;
+    padding: 0px 20px;
+}
+
+a,
+button {
+    font-size: 20px;
+    font-weight: 500;
+    color: antiquewhite;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button {
+    background: rgba(0, 0, 0, 0.2);
+    border: 2px solid #fd5e;
+    border-radius: 50px;
+    padding: 9px 25px;
+}
+
+
+nav li a:hover {
+
+    color: #fd4e;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+
+/* For Search bar*/
+
+.container {
+
+    height: 100vh;
+
+    padding: 300px;
+    display: flex;
+    align-items: center;
+    vertical-align: top;
+    font-family: sans-serif;
+    background-size: cover;
+
+
+
+}
+
+.search-field {
+    width: 500px;
+    height: 50px;
+
+    padding: 20px;
+
+    border: none;
+    border-radius: 25px;
+    outline: none;
+
+
+}
+
+.location {
+    font-size: 15px;
+    width: 150px;
+}
+
+.learn{
+    font-size: 16px;
+    /*text-align: center;*/
+}
+
+
+.search-button {
+
+    height: 50px;
+    width: 70px;
+    background: #ffeb3b;
+    border: none;
+    padding: inherit;
+    border-radius: 50px;
+    font-size: 17px;
+    font-family: 'Exo 2', sans-serif;
+    font-family: 'Orbitron', sans-serif;
+    /* background-image: url(Images/search_icon.png) */
+
+}
+
+.firstline {
+    font-size: 50px;
+    padding-top: 10px;
+    color: beige;
+    text-align: center;
+    padding-left: 20px;
+}
+
+.firstline h3 {
+    padding-top: 60px;
+    font-size: 50px;
+    font-family: monospace;
+}
+
+.firstline h5 {
+    font-size: 20px;
+    font-family: monospace;
+}
+
+        /*Phase two*/
+
+ .phase-two .h2{
+    /*text-align: center;*/
+    align-items: center;
+    font-family: 'Comfortaa', cursive;
+}
