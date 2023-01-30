@@ -5,7 +5,7 @@
    <meta name="referrer" content="origin-when-cross-origin" />
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-   <title> Login Form</title>
+   <title> Create profile/To Enhance yourself</title>
    <!-- For favicon-->
    <link rel="icon" type="image/x-icon" href="Images/favicon.png">
    <!-- To link CSS and JS-->
@@ -22,19 +22,19 @@
       <form class="login-form">
          <table class="form-elements">
             <tr>
-               <td class="element-names">
+               <td class="element-names" > 
                   Name</td>
-               <td> <input class="field" type="text" placeholder="Username" name="Name"></td>
+               <td> <input class="field" type="text" required placeholder="Username" name="Name"></td>
             </tr>
             <tr>
                <td class="element-names">
                   Password </td>
-               <td> <input class="field" type="Password" placeholder="Should be unique" name="Password"></td>
+               <td> <input class="field" type="Password" required placeholder="Should be unique" name="Password"></td>
             </tr>
             <td class="element-names ">
                Gender</td>
-            <td class= "gender" > <input  type="radio" placeholder="choose" name="Gender">male
-               <input type="radio" placeholder="choose" name="Gender">female </td>
+            <td class= "gender" > <input  type="radio" placeholder="choose" name="Gender">Male
+               <input type="radio" placeholder="choose" name="Gender">Female </td>
             </tr>
             <tr>
                <td class="element-names">
@@ -43,7 +43,7 @@
             <tr>
                <td class="element-names">
                   Contact  </td>
-               <td> <select>
+               <td> <select class="select-country">
                      <option>(+91) India </option>
                      <option>(+60) Malasia</option>
                      <option>(+65) Singapore</option>
@@ -51,12 +51,12 @@
                      <option>(+970) Dubai</option>
                      <option>(+64) New Zealand</option>
                   </select>
-                  <input class="field" type="text" size=15 placeholder="Contact" name="Contact no.">
+                  <input class="field" type="text" required  placeholder="Contact" name="Contact no.">
 
          </table>
          <!-- <button class="submit-btn"><a href="/" target=blank> Create </button> -->
-          <button class="submit-btn"><input  class="create-alert" type = "button" onclick = "Hello();" name = "ok" value = "" />Create</button>
-                 
+          <!--<button class="submit-btn"><input  class="create-alert" type = "submit" onclick = "Hello();" name = "ok" value = "" />Create</button> -->
+          <button class="submit-btn"><a class="create-alert" href="loginpage.html" target="_blank">Create</a></button>      
             
       </form>
       

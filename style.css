@@ -58,7 +58,7 @@ a,
 button {
     font-size: 20px;
     font-weight: 500;
-    color: antiquewhite;
+    color: rgb(244, 250, 249);
     text-decoration: none;
     cursor: pointer;
 }
@@ -154,9 +154,26 @@ nav li a:hover {
 }
 
         /*Phase two*/
-
+        phase-two
  .phase-two .h2{
     /*text-align: center;*/
     align-items: center;
     font-family: 'Comfortaa', cursive;
+}
+/*---------------------------------------phase-two----------------------------*/
+
+.phase-two{
+    background: url(Images/under\ cons.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+h2{
+    text-align: center;
+    font-size: 50px;
+    color: #ffeb3b;
+   
+    
 }
