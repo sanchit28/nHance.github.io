@@ -15,10 +15,11 @@ body {
     background-position: center;
     background-repeat: no-repeat;
 }
-.login-form{
+.create-form{
     font-size: 50px;
-    padding-left: 800px;
+    padding-left: 1000px;
     padding-top: 200px;
+    
     
    
     align-items: center;
@@ -72,6 +73,8 @@ button {
 }
 
 .gender{
+    font-size: 20px;
+    font-weight: 100;
     padding-left: 30px;
     font-family: 'Comfortaa', cursive;  
     font-weight:bolder;

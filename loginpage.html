@@ -9,6 +9,8 @@
     <title> Login</title>
      <!-- For favicon-->
     <link rel="icon" type="image/x-icon" href="Images/favicon.png">
+    <!-- To link CSS and JS-->
+    
     <link rel="stylesheet" href="loginpage_style.css">
     <!-- For fonts-1-->
      
@@ -24,18 +26,20 @@
     <form class="login-form" role="Login" action="">
         <div class="login-box">
             <p class="form-name"> Login with your credentials</p>
-            <input class ="element-names" type="text" required class="login-field" placeholder="Your Username">
+            <input class ="element-names"  id="username" type="text" required class="login-field" placeholder="Your Username">
 
-            <input class ="element-names"  type="text" required class="login-field" placeholder=" Enter Password">
-            <button class ="login-btn"  type="submit"  placeholder="Location" name=""> <input  type = "button" onclick = "Hello();" name = "ok" value = "" />Login </button> 
+            <input class ="element-names" id="password" type="text" required class="login-field" placeholder=" Enter Password">
+           <!-- <button class ="login-btn" onclick="getinfo()" type="submit"  placeholder="Location" name=""> <input  type = "button" onclick = "Hello();" name = "ok" value = "" />Login </button> 
+            -->
+            <button class ="login-btn" type="button"  onclick="validate()" >Login </button> 
             <p class="or"> OR</p>
-            <button class ="create-btn" type="submit"  placeholder="Location" name=""> <a href="Create.html" target="_blank">Create Account  </a></button> 
+            <button class ="create-btn" type="submit" > <a href="Create.html" target="_blank">Create Account  </a></button> 
             
         </div>
         
 
     </form>
-        
+    <script src="login.js"></script> 
 </body>
-
+  
 </html>

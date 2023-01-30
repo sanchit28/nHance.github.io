@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+
 <html>
 
 <head>
@@ -9,7 +11,7 @@
    <!-- For favicon-->
    <link rel="icon" type="image/x-icon" href="Images/favicon.png">
    <!-- To link CSS and JS-->
-   <script src="interact_2.js" type="text/javascript"> </script>
+    <script src="Create.js" type="text/javascript"> </script> 
    <link rel="stylesheet" href="Create_style.css">
    <!-- For fonts-1-->
    <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,27 +21,27 @@
 
 <body >
    
-      <form class="login-form">
+      <form class="create-form" action ="/myaction.php" name="myForm" onsubmit="return validateForm()" method="post">
          <table class="form-elements">
             <tr>
                <td class="element-names" > 
                   Name</td>
-               <td> <input class="field" type="text" required placeholder="Username" name="Name"></td>
+               <td> <input class="field" id ="name" type="text"  placeholder="Username" name ="name"> <span class="formerror"></span> </td>
             </tr>
             <tr>
                <td class="element-names">
                   Password </td>
-               <td> <input class="field" type="Password" required placeholder="Should be unique" name="Password"></td>
+               <td> <input class="field" id ="password" type="Password"  placeholder="Should be unique" name ="password"><span class="formerror"></span> </td>
             </tr>
             <td class="element-names ">
                Gender</td>
-            <td class= "gender" > <input  type="radio" placeholder="choose" name="Gender">Male
+            <td class= "gender" > <input  type="radio" placeholder="choose" name="gender">Male
                <input type="radio" placeholder="choose" name="Gender">Female </td>
             </tr>
             <tr>
                <td class="element-names">
                   Email  </td>
-               <td> <input class="field" type="Email" placeholder="Mailing address" name="Email">
+               <td> <input class="field" id ="email" type="Email" placeholder="Mailing address" name="email"><span class="formerror"></span></td> 
             <tr>
                <td class="element-names">
                   Contact  </td>
@@ -51,15 +53,46 @@
                      <option>(+970) Dubai</option>
                      <option>(+64) New Zealand</option>
                   </select>
-                  <input class="field" type="text" required  placeholder="Contact" name="Contact no.">
+                  
+               <input class="field" id ="contact" type="text" placeholder="Contact" name="contact"><span class="formerror"></span>
 
          </table>
-         <!-- <button class="submit-btn"><a href="/" target=blank> Create </button> -->
+        
           <!--<button class="submit-btn"><input  class="create-alert" type = "submit" onclick = "Hello();" name = "ok" value = "" />Create</button> -->
-          <button class="submit-btn"><a class="create-alert" href="loginpage.html" target="_blank">Create</a></button>      
-            
+          <!--<button class="submit-btn"><a class="create-alert" href="loginpage.html" target="_blank">Create</a></button>    -->   
+          <button class="submit-btn" type="button" onclick="Hello()"><a class="create-alert"  >Create</a></button>
       </form>
       
 </body>
+<script>
+function clearErrors(){
 
+errors = document.getElementsByClassName('formerror');
+for(let item of errors)
+{
+    item.innerHTML = "";
+}
+}
+function seterror(id, error){
+    //sets error inside tag of id 
+    element = document.getElementById(id);
+    element.getElementsByClassName('myForm')[0].innerHTML = error;
+
+}
+function validateForm(){
+    var returnval = true;
+    
+
+    //perform validation and if validation fails, set the value of returnval to false
+    var name = document.forms["myForm"]["name"].value;
+    if (name.length<7){
+        seterror("name", "*Length of name should more than 10!");
+        returnval = false;
+    }
+    
+
+   
+}
+
+</script>
 </html>
