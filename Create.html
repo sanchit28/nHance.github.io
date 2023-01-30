@@ -1,98 +1,73 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-   <meta charset="UTF-8">
-   <meta name="referrer" content="origin-when-cross-origin" />
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-   <title> Create profile/To Enhance yourself</title>
-   <!-- For favicon-->
-   <link rel="icon" type="image/x-icon" href="Images/favicon.png">
-   <!-- To link CSS and JS-->
-    <script src="Create.js" type="text/javascript"> </script> 
-   <link rel="stylesheet" href="Create_style.css">
-   <!-- For fonts-1-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Form</title>
+    <!-- For fonts-1-->
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap" rel="stylesheet">
+   <!--for form icons fontawesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+        integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ=="
+        crossorigin="anonymous" />
+        <!-- To link CSS and JS--> 
+    <link rel="stylesheet" type="text/css" href="style.css">  
 </head>
-
-<body >
-   
-      <form class="create-form" action ="/myaction.php" name="myForm" onsubmit="return validateForm()" method="post">
-         <table class="form-elements">
-            <tr>
-               <td class="element-names" > 
-                  Name</td>
-               <td> <input class="field" id ="name" type="text"  placeholder="Username" name ="name"> <span class="formerror"></span> </td>
-            </tr>
-            <tr>
-               <td class="element-names">
-                  Password </td>
-               <td> <input class="field" id ="password" type="Password"  placeholder="Should be unique" name ="password"><span class="formerror"></span> </td>
-            </tr>
-            <td class="element-names ">
-               Gender</td>
-            <td class= "gender" > <input  type="radio" placeholder="choose" name="gender">Male
-               <input type="radio" placeholder="choose" name="Gender">Female </td>
-            </tr>
-            <tr>
-               <td class="element-names">
-                  Email  </td>
-               <td> <input class="field" id ="email" type="Email" placeholder="Mailing address" name="email"><span class="formerror"></span></td> 
-            <tr>
-               <td class="element-names">
-                  Contact  </td>
-               <td> <select class="select-country">
-                     <option>(+91) India </option>
-                     <option>(+60) Malasia</option>
-                     <option>(+65) Singapore</option>
-
-                     <option>(+970) Dubai</option>
-                     <option>(+64) New Zealand</option>
-                  </select>
-                  
-               <input class="field" id ="contact" type="text" placeholder="Contact" name="contact"><span class="formerror"></span>
-
-         </table>
+<body>
+    
+    <div class="container">
         
-          <!--<button class="submit-btn"><input  class="create-alert" type = "submit" onclick = "Hello();" name = "ok" value = "" />Create</button> -->
-          <!--<button class="submit-btn"><a class="create-alert" href="loginpage.html" target="_blank">Create</a></button>    -->   
-          <button class="submit-btn" type="button" onclick="Hello()"><a class="create-alert"  >Create</a></button>
-      </form>
-      
+
+        <form action="" class="form" id="form">
+            <div class="form-control">
+                <label>First Name</label>
+                <input type="text"   name="" id="username" placeholder="John Doe" autocomplete="off">
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error Message</small>
+            </div>
+
+          
+
+            <div class="form-control">
+                <label>Email</label>
+                <input type="text"   name="" id="email" placeholder="Johndoe@gmail.com" autocomplete="off">
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error Message</small>
+            </div>
+
+            <div class="form-control">
+                <label>Password</label>
+                <input type="password"   name="" id="password" placeholder="Enter Your Password" autocomplete="off">
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error Message</small>
+            </div>
+
+            <div class="form-control">
+                <label>Contact</label>
+                <input type="password"  name="" id="phone" placeholder="99XXX56XXX" autocomplete="off">
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error Message</small>
+            </div>
+            <input type="submit" value="Create" class="btn">
+        </form>
+    </div>
+
+
+
+
+
+
+
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    
+    <script src="script.js"></script>
 </body>
-<script>
-function clearErrors(){
-
-errors = document.getElementsByClassName('formerror');
-for(let item of errors)
-{
-    item.innerHTML = "";
-}
-}
-function seterror(id, error){
-    //sets error inside tag of id 
-    element = document.getElementById(id);
-    element.getElementsByClassName('myForm')[0].innerHTML = error;
-
-}
-function validateForm(){
-    var returnval = true;
-    
-
-    //perform validation and if validation fails, set the value of returnval to false
-    var name = document.forms["myForm"]["name"].value;
-    if (name.length<7){
-        seterror("name", "*Length of name should more than 10!");
-        returnval = false;
-    }
-    
-
-   
-}
-
-</script>
 </html>
