@@ -8,27 +8,7 @@ form.addEventListener('submit', (event) =>{
 
     Validate();
 })
-/*------------------------------------------------------------------------ */
-const sendData = (usernameVal, sRate, Count) => {
-    if(sRate === Count){
-        swal("Hello " + usernameVal , "You are Registered", "success");
-    }
-}
-/*------------------------------------------------------------------------ */
-const SuccessMsg = (usernameVal) => {
-    let formContr = document.getElementsByClassName('form-control');
-    var Count = formContr.length - 1;
-    for(var i = 0; i < formContr.length; i++){
-        if(formContr[i].className === "form-control success"){
-            var sRate = 0 + i;
-            console.log(sRate);
-            sendData(usernameVal, sRate, Count);
-        }
-        else{
-            return false;
-        }
-    }
-}
+
 
 /*-----------------------------for email verification ------------------------------------------- */
 const isEmail = (emailVal) =>{
@@ -40,7 +20,7 @@ const isEmail = (emailVal) =>{
     if(dot === emailVal.length -1) return false;
     return true;
 }
-/* extra function for mail verification */
+/* extra function for mail verification with regex*/
 function isValidEmail(email){
     return /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
  }
@@ -94,7 +74,7 @@ function Validate(){
         setSuccessMsg(phone);
     }
 */
-    SuccessMsg(usernameVal);
+   
 
 
 }

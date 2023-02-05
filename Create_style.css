@@ -12,10 +12,11 @@ body{
    
     
    
-    background-image: url(Images/back_3.jpg);
+    background-image: url(Images/back_4.jpg) ;
     background-size: cover;
-    background-position: center;
+    /* background-position: center ; */
     background-repeat: no-repeat;
+    background-size: 900px 900px;
 }
 
 .container{
@@ -32,7 +33,7 @@ body{
 }
 
 .form{
-    padding: 50px;
+    padding-top: 120px;
     
 }
 
