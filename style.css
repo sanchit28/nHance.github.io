@@ -1,13 +1,13 @@
 @media only screen and (max-width: 500px) {
-   
-    body{
-     background-size: cover;
-     background-position: center;
- } 
 
-     
- 
- }
+    body {
+        background-size: cover;
+        background-position: center;
+    }
+
+
+
+}
 
 * {
     margin: 0;
@@ -27,7 +27,7 @@ body {
     background-repeat: no-repeat;
 }
 
-/* For navbar,logo and login button*/
+/* For navbar,logo and login button */
 header {
 
     width: 100%;
@@ -78,13 +78,13 @@ nav li a:hover {
 }
 
 
-/* For Search bar*/
+                                /* ----------------------For Search bar-----------------------*/
 
 .container {
 
-    height: 100vh;
-
-    padding: 300px;
+    height: 84vh;
+    margin-left: 100px;
+     padding: 150px; 
     display: flex;
     align-items: center;
     vertical-align: top;
@@ -95,8 +95,12 @@ nav li a:hover {
 
 }
 
+.search-box {
+    margin-left: 50px;
+}
+
 .search-field {
-    width: 500px;
+    width: 400px;
     height: 50px;
 
     padding: 20px;
@@ -113,7 +117,7 @@ nav li a:hover {
     width: 150px;
 }
 
-.learn{
+.learn {
     font-size: 16px;
     /*text-align: center;*/
 }
@@ -122,7 +126,7 @@ nav li a:hover {
 .search-button {
 
     height: 50px;
-    width: 70px;
+    width: 80px;
     background: #ffeb3b;
     border: none;
     padding: inherit;
@@ -130,6 +134,7 @@ nav li a:hover {
     font-size: 17px;
     font-family: 'Exo 2', sans-serif;
     font-family: 'Orbitron', sans-serif;
+    margin: 20px;
     /* background-image: url(Images/search_icon.png) */
 
 }
@@ -139,7 +144,8 @@ nav li a:hover {
     padding-top: 10px;
     color: beige;
     text-align: center;
-    padding-left: 20px;
+    /* padding-left:px; */
+    margin-right: 120px;
 }
 
 .firstline h3 {
@@ -153,27 +159,164 @@ nav li a:hover {
     font-family: monospace;
 }
 
-        /*Phase two*/
-        phase-two
- .phase-two .h2{
-    /*text-align: center;*/
-    align-items: center;
-    font-family: 'Comfortaa', cursive;
-}
+
+
+/*--------------------------------------------------------------------------*/
 /*---------------------------------------phase-two----------------------------*/
 
-.phase-two{
-    background: url(Images/under\ cons.jpg);
-    height: 100vh;
+ 
+
+.phase-two {
+    /* background: url(Images/under\ cons.jpg); */
+    height: 120vh;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    
+    /* background: rgba(238, 236, 191, 0.6); */
+
 }
-h2{
+.profile-image {
+    border-radius: 50%;
+    display: block;
+    max-height:250px;
+    max-width: 250px;
+    margin: 0 auto 1em;
+    width: 100%;
+    opacity: 0.85;
+  }
+
+
+ h2 {
+    margin-top: 50px;
     text-align: center;
     font-size: 50px;
-    color: #ffeb3b;
-   
-    
+    color: #4b4b46;
 }
+.text{
+    font-size: 20px;
+    margin: 10px;
+    text-align: center;
+}
+
+  /* ---------------------------------------Contact------------------------------------ */
+  .contact-me-container{
+    padding:3%;
+background: rgba(22, 122, 209, 0.386);
+  
+}
+.fa-user,.fa-at,.fa-phone
+{
+  color:black;
+}
+.submit-button{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+/* test */
+.intro-text{
+    padding-right: 200px;
+    font-size: 60px;
+}
+.btn{
+    margin-left: 50px;
+}
+/* ========================
+  Footer
+  ======================== */
+  
+  footer {
+    /* background-color: #549fea; */
+    background-color: #92cbdf;
+    color:  rgb(40, 47, 41);
+    font-size: 1.5em;
+    text-align: center;
+    padding:3%;
+    opacity: 1;
+    border: 10px solid rgba(94, 126, 154, 0.6)
+    ;
+  }
+  a.tel,a.tel:hover
+  {
+    text-decoration:none;
+    color:#fff;
+  }
+  a.social-button {
+      background: #fff;
+      font-size: 20px;
+      border-radius: 50%;
+      margin: 5px;
+  }
+  .address-container{
+      display: inline-block;
+      margin: 0 auto;
+  }
+  a.link-facebook,a.link-twitter,a.link-codepen,a.link-linkedin,a.link-instagram
+  {
+    transition:0.4s ease;
+  }
+  a.link-twitter
+  {
+    color:#1DA1F2;
+  }
+  a.link-facebook
+  {
+   color: #3b5998;
+  }
+  a.link-linkedin
+  {
+    color:#007bb6;
+  }
+  a.link-instagram
+  {
+    color:#e95950;
+  }
+  a.link-facebook:hover{
+      background-color: #3b5998;
+      color: #fff;
+  }
+  
+  a.link-twitter:hover{
+      background-color: #1DA1F2;
+      color: #fff;
+  }
+  
+  a.link-codepen:hover{
+      background-color: black;
+      color: #fff;
+  }
+  
+  a.link-linkedin:hover{
+      background-color: #007bb6;
+      color: #fff;
+  }
+  a.link-instagram:hover{
+      background-color: #e95950;
+      color: #fff;
+  }
+  .btn-default {
+      color: #333;
+      background-color: #fff;
+      border-color: transparent!important;
+  }
+  .fa-heart {
+    color:#f32323;
+  }
+  h4.author
+  {
+    letter-spacing:4px;
+  }
+  hr.footer-hr
+  {
+    width:50%;
+  }
+  hr.copyright
+  {
+    opacity:0.4;
+  }
+
+  /* test */
+  .footer-container{
+    width: 1000px;
+    height: 400px;
+
+  }

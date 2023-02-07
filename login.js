@@ -17,7 +17,7 @@ function getInfo(){
 }
 
 */
-
+// Login ID & passowrd dictonary
 var database = [
     {
         username : "root",
@@ -32,6 +32,8 @@ var database = [
         password : "sanchit1234"
     }
 ]
+
+var attempt = 5; // Variable to count number of attempts
 function validate(){
     var username = document.getElementById("username").value
     var password = document.getElementById("password").value
@@ -40,14 +42,32 @@ function validate(){
             alert("Successfull Login, Hola Visionary");
             //console.log("Successfull Login, Hola Visionary");
             return
-        }//else{
+        }
+        
+            
+            
+
+        
+        //else{
             //alert("Login Failed!! Try with correct username & password");
             //console.log("Login Failed!! Try Again..");
         //}
-        
-    }alert("Login Failed!! Try with correct username & password");
-    //console.log("Login Failed!! Try Again..");
+         
+    }
+    attempt --;// Decrementing by one.
+    alert("You have left "+attempt+" attempt;");
+    // Disabling fields after 3 attempts.
+    if( attempt == 0){
+    document.getElementById("username").disabled = true;
+    document.getElementById("password").disabled = true;
+    document.getElementById("login").disabled = true;
+    return false;
+    }
+    // alert("Login Failed!! Try with correct username & password");
+            //console.log("Login Failed!! Try Again..");
 }
+
+
 /*
 function validate(){
     var username = document.getElementById("username").value;
