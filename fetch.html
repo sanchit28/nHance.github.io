@@ -1,104 +1,113 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<!-- Setting the pages character encoding -->
-	<meta charset="UTF-8">
-
-	<!-- The meta viewport will scale my content to any device width -->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-	 <!-- Link to my stylesheet -->
-	 <link rel="stylesheet" href="css/fetch.css">
-
-     <!-- bootstarp link -->
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-	<title>Start up</title>
-    <!-- <style>
-        h1{
-            text-align: center;
-        }
+    <!-- Setting the pages character encoding -->
+    <meta charset="UTF-8">
+    
+    <!-- The meta viewport will scale my content to any device width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Link to my stylesheet -->
+    <link rel="stylesheet" href="css/fetch.css">
+    
+    <!-- bootstarp link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!--for form icons fontawesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
         
-    </style> -->
+   
+    <title>Fetch API</title>
+   
 </head>
+
 <body>
-                                            <!-- for loader -->
+    <!-- for loader -->
     <div class="spinner-wrapper">
         <div class="spinner-border text-primary" role="status">
             <span class="visually-hidden">Loading...</span>
-         </div>
-    </div>
-    <!-- ---------------------------------------------- -->
-	
-
-    <div class="container">
-        <div class="operations">
-            <form class="operations-data">
-                <div class="head">
-
-                    <p class="form-name"><b>Perform CRUD</b> </p>
-                    <button class="log-out btns" id="get" type="button" > Log out </button>
-
-                </div>
-                <input class="element-names" id="userid" type="text" class="login-field" placeholder="Type  UserId">
-                <input class="element-names" id="ID" type="text" class="login-field" placeholder=" Type ID">
-                <input class="element-names" id="title" type="text" class="login-field" placeholder="Your Title">
-                <input class="element-names" id="body" type="text" class="login-field" placeholder=" Type body">
-        
-                <div class="buttons">
-                    <button class="get-data btns" id="get" type="submit" onclick="getData()">GET data </button>
-        
-                    <button class="add-data btns" id="add" type="submit" onclick="">Submit Data </button>
-                    <button class="update-data btns" id="update-data" type="submit" onclick="">Update Data</button>
-                    <button class="delete-data btns" id="delete" type="submit" onclick="">Delete Data</button>
-                </div>
-            </form>
         </div>
+    </div>
+    <!-- -----------     -------------      -------------    --------- -->
+    <div class="operations">
+        <form class="operations-data">
+            <div class="head">
+                <img  class = "logp" src="Images/CR_Logo2.png">
+                <p class="form-name"><b>Perform CRUD</b> </p>
+                <i class="fa-regular fa-pen-to-square"></i>
+                <button onclick="window.location.href='loginpage.html'"  class="log-out btns" id="get"
+                    type="button">Log out </button>
                     
-	    <table class ="table table-bordered table-hover">
-		<thead class="thead-dark">
-			<tr class="fix">
-				
-				<th class="header">userId</th>
-				<th class="header" >Id</th>
-				<th class="header">Title</th>
-				<th class="header">Body</th>
-			</tr>
-		</thead>
-		<tbody id="data">
-			
-		</tbody>
+
+            </div>
+            <div class="data-fields" id="update-form">
+                <input class="element-names" id="id" type="text" class="login-field" autocomplete="off" placeholder=" Type ID">
+                <input class="element-names" id="userid" type="text" class="login-field" autocomplete="off" placeholder="Type  UserId">
+                
+                <input class="element-names" id="title" type="text" class="login-field" autocomplete="off" placeholder="Your Title">
+                <input class="element-names" id="body" type="text" class="login-field" autocomplete="off" placeholder=" Type body">
+            </div>
+            <div class="operations">
+
+                <button class="get-btn btns" id="get-data" type="button" onclick="getData();">GET data </button>
+                <button class="add-btn btns" id="add-data" type="button" onclick=" ">Add Data </button>
+                <!-- <button class="delete-btn btns" id="delete-data" type="button" >Delete Data</button> -->
+                <button class="delete-btn btns" id="delete-data" type="button" onclick="deleteSelectedRow()">Delete Data</button>
+                <button class="update-btn btns" id="update-data" type="button" onclick=" updateDataInTable()">Update Data</button>
+                <button class="xlear-btn btns" id="clear-data" type="button" onclick="clearall()">Clear Data</button>
+
+                <!-- <button class="select-data btns" id="select-data" type="button" onclick="">Select Data</button> -->
+            </div>
+        </form>
+    </div>
+
+<div class="container-2">
+    <div class="container">
         
-	    </table>
-                                                <!-- for css animation -->
-        <!-- <div class="area">
-        <ul class="circles">
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
-   
-        </div> -->
+        
+        <table class="table table-bordered table-hover" width="100%"  id="myTable">
+            <thead class="thead-dark">
+                <tr class="fix">
+
+                    <th class="header" id = "unique">Id</th>
+                    <th class="header">userId</th>
+                    
+                    <th class="header">Title</th>
+                    <th class="header">Body</th>
+                    <!-- <th class="header">select</th> -->
+                    
+                    
+                </tr>
+            </thead>
+            <tbody id="data">
+                <!-- <i class="fa-regular fa-pen-to-square"></i> -->
+            </tbody>
+
+        </table>
+        
+    </div>
 </div>
 
+    <!-- make page heavy -->
 
-<!-- make page heavy -->
-<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/YfMQ8fORCPM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/YfMQ8fORCPM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/YfMQ8fORCPM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/YfMQ8fORCPM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
+    <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/YfMQ8fORCPM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/YfMQ8fORCPM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/YfMQ8fORCPM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/YfMQ8fORCPM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
 
-<!------------------------>
+    <!------------------------>
+
+
     <!-- Link to the javascript file -->
-	<script src="JS/fetch.js"></script> 
    
+    
+    <script src="js/fetch.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 </body>
+
 </html>

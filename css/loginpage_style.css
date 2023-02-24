@@ -9,7 +9,7 @@
 }
 
 body {
-    /* background-image: url(Images/back_3.jpg); */
+   
     height: 100vh;
     background-size: cover;
     background-position: center;
@@ -39,6 +39,8 @@ body {
 .login-form{
     font-size: 40px;
     /* border: solid salmon 2px; */
+    /* background-image:  url(Images/back.jpg); */
+    
       
 }
 
@@ -49,6 +51,7 @@ a:hover , button{
     cursor:pointer;  
 }
 .login-box{
+    
     font-size: 50px;
     /* padding-left: 500px; */
     padding-top: 20px;
